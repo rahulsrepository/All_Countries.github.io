@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+
+}
+body {
+    --background-color: white;
+    --text-color: black;
+    --elements-color: white;
+    margin: 0;
+    font-family: Nunito, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.dark {
+    --background-color: hsl(207, 26%, 17%); 
+    --text-color: white;
+    --elements-color: hsl(209, 23%, 22%);
+}
+.change{
+    cursor:pointer;
+}
+
+main{
+    padding:44px;
+    margin-inline: 40px;
+}
+
+a{
+    text-decoration-line:none;
+}
+
+.search-container{
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.2);
+    max-width:400px;
+    color:rgb(128, 124, 124);
+    font-size:16px;
+    overflow: hidden;
+    background-color: var(--elements-color);
+    color:var(--text-color);
+    
+}
+
+.search-container input{
+    border:none;
+    outline:0;
+    padding:14px;
+    width:90%;
+    background-color:inherit;
+    color:inherit;
+    
+}
+
+.search-container i{
+    margin-left: 16px;
+}
+
+.search-container input::placeholder{
+    color:rgb(128, 124, 124);
+}
+
+
+.search{
+    margin-bottom: 50px;
+    margin-top:0px;
+}
+
+.header-container{
+    box-shadow: 0 2px 2px 2px rgba(0,0,0,0.1);
+    padding-inline: 24px;
+    background-color: var(--elements-color);
+    /* padding-block: 0px; */
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width:1200px;
+    margin-inline: auto;
+}
+
+.countries-container{
+    display:flex;
+    max-width:1800px;
+    /* margin-inline: auto; */
+    gap:64px;
+    flex-wrap: wrap;
+}
+
+.country-card{
+    display:inline-block;
+    width:250px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding-bottom: 12px;
+    transition:transform 0.3s ease-in-out;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+.country-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px 4px rgba(0,0,0,0.2);
+
+}
+
+
+.card-title{
+    /* color:black; */
+    font-size:24px;
+    margin-block:16px;
+}
+
+.card-text{
+    --text-color: white;
+    /* color:black; */
+    font-size: 14px;
+    padding-inline:18px;
+}
+
+.card-text p{
+    margin-block:6px;
+    margin-bottom: 8px;
+}
+
+.country-card img{
+    width:100%;
+}
+
+@media(max-width : 768px){
+    .countries-container{
+        justify-content: center;
+    }
+
+    .title{
+        font-size:16px;
+    }
+
+    .header-content p{
+        font-size: 12px;
+    }
+}
